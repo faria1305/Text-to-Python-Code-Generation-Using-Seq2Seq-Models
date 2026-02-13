@@ -151,7 +151,7 @@ def create_sample_dataset():
         ("calculate the sum of two numbers", "def add(a, b): return a + b"),
         ("multiply two numbers and return result", "def multiply(x, y): return x * y"),
         ("subtract second number from first", "def subtract(a, b): return a - b"),
-        ("divide first number by second", "def divide(a, b): return a / b"),
+        ("divide first number by second", "def divide(a, b): return a / b if b != 0 else 0"),
         ("check if number is even", "def is_even(n): return n % 2 == 0"),
         ("check if number is odd", "def is_odd(n): return n % 2 != 0"),
         ("find maximum of two numbers", "def max_num(a, b): return a if a > b else b"),

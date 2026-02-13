@@ -142,7 +142,7 @@ def train_model(model, train_loader, val_loader, num_epochs, device,
     # Create save directory
     os.makedirs(save_dir, exist_ok=True)
     
-    # Loss function (ignore padding index)
+    # Loss function (ignore padding index which is always 0 in our Vocabulary class)
     criterion = nn.CrossEntropyLoss(ignore_index=0)
     
     # Optimizer

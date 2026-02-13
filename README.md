@@ -13,7 +13,9 @@ This project implements and compares three different recurrent neural network (R
 ```
 .
 ├── README.md                   # This file
+├── MODEL_ARCHITECTURE.md       # Detailed model architecture documentation
 ├── requirements.txt            # Python dependencies
+├── quick_start.py             # Quick start example script
 ├── data_utils.py              # Data preprocessing and dataset utilities
 ├── model_rnn.py               # Vanilla RNN Seq2Seq implementation
 ├── model_lstm.py              # LSTM Seq2Seq implementation
@@ -36,7 +38,21 @@ cd Text-to-Python-Code-Generation-Using-Seq2Seq-Models
 pip install -r requirements.txt
 ```
 
-## Usage
+## Quick Start
+
+The fastest way to get started:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the quick start example
+python quick_start.py
+```
+
+This will train all three models and generate a comparison plot.
+
+## Detailed Usage
 
 ### Training All Models
 
@@ -98,17 +114,22 @@ For real-world applications, you can extend the `create_sample_dataset()` functi
 - **Encoder**: Vanilla RNN that processes the input text sequence
 - **Decoder**: Vanilla RNN that generates the output code sequence
 - Uses teacher forcing during training for faster convergence
+- Simple architecture, good baseline model
 
 ### 2. LSTM Seq2Seq
 - **Encoder**: LSTM network that processes the input text sequence
 - **Decoder**: LSTM network that generates the output code sequence
 - Better at capturing long-range dependencies compared to vanilla RNN
+- Uses memory cells to maintain information over time
 
 ### 3. LSTM with Attention
 - **Encoder**: LSTM network that processes the input text sequence
 - **Decoder**: LSTM network with attention mechanism
 - **Attention**: Computes context vector as weighted sum of encoder outputs
 - Allows the decoder to focus on relevant parts of the input sequence
+- Best performance for sequence-to-sequence tasks
+
+For detailed architecture information, see [MODEL_ARCHITECTURE.md](MODEL_ARCHITECTURE.md).
 
 ## Performance Comparison
 

@@ -149,7 +149,7 @@ def train_model(model, train_loader, val_loader, num_epochs, device,
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     
     # Learning rate scheduler
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=2, verbose=True)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=2)
     
     train_losses = []
     val_losses = []
